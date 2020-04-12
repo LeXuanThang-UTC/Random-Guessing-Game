@@ -10,14 +10,14 @@ lower = int(sys.argv[1])
 upper = int(sys.argv[2])
 
 while True:
-    # input guess
-    answer = randint(lower, upper)
-    guess_answer = input(f'Lets play. Enter your number {lower} ~ {upper}: ')
-    if guess_answer == 'exit':
-        print('Bye bye')
-        break
-    guess_answer = int(guess_answer)
     try:
+        # input guess
+        answer = randint(lower, upper)
+        guess_answer = input(f'Lets play. Enter your number {lower} ~ {upper}: ')
+        if guess_answer == 'exit':
+            print('Bye bye')
+            break
+        guess_answer = int(guess_answer)
         # check that input is a number 1 ~ 10
         if lower < guess_answer < upper:
             if guess_answer == answer:
